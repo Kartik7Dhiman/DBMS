@@ -1,0 +1,29 @@
+1. CHECK CONSTRAINT
+
+create table students(id int,name varchar(50), age int, constraint age check(age>15));
+alter table dept add constraint dept_id check (dept_id>100);
+
+2.DEFAULT CONSTRAINT
+
+create table students(id int,name varchar(50),age int, branch varchar(10) default 'CSE');
+alter table dept modify dept_name default 'ECE';
+
+3.PRIMARY KEY CONSTRAINT
+
+CREATE TABLE students(id int primary key, name varchar(50),age int);
+ALTER TABLE DEPT ADD primary key(dept_id);
+
+4.NOT NULL CONSTRAINT
+
+create table students(id int,name varchar(50) not null,age int);
+alter table dept modify dept_name not null;
+
+5.UNIQUE CONSTRAINT
+
+create table students(id int,name varchar(50) unique,age int);
+alter table dept add unique(dept_name);
+
+6. FOREIGN KEY CONSTRAINT
+
+create table dept(dept_id int primary key, dept_name varchar(50));
+create table students(roll_no int,student_name varchar(50),age int,dept_id int, foreign key(dept_id) references dept(dept_id));
