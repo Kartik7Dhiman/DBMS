@@ -1,0 +1,30 @@
+CREATE TABLE:
+   
+   Create table students(rollNo int, studentName varchar(50), branch varchar(10), semester int);
+   
+   
+ALTER TABLE: 
+
+   alter table student add gender varchar(1);
+   
+   
+ALTER TABLE-2:
+
+   alter table students rename column phone to contact;
+   alter table students modify stud_name varchar(30);
+   alter table students drop column marks;
+   
+   
+RENAME TABLE:
+
+   alter table student rename to student_data;
+   
+   
+DROP TABLE:
+
+   drop table student;
+   
+   
+Truncate Table:
+
+   truncate table student;
